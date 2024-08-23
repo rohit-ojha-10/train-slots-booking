@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Slot } from '../../page/coach/components/slot/slot.model';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class SeatManagementService {
   private slots: Slot[] = Array.from({ length: 80 }, (_, i) => ({
     index: i,
