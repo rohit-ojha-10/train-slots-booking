@@ -1,0 +1,11 @@
+<div
+  class="slot"
+  (click)="handleClick()"
+  [ngClass]="{
+    'selected': selected && !booked,
+    'booked': booked,
+    'default': !selected && !booked
+  }"
+>
+  {{ index }}
+</div>

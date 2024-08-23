@@ -1,0 +1,41 @@
+.slot {
+    border: 1px solid #4a90e2;
+    border-radius: 8px;
+    height: 2.5em;
+    width: 100%;
+    padding: 0.5em;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #1c1e22; 
+    color: #ecf0f1; 
+}
+
+.slot:hover {
+    transform: scale(1.05);
+    border-color: #357abd;
+    box-shadow: 0 0 8px #4a90e2;
+}
+
+.selected {
+    background-color: #5bc286;
+    color: #fff;
+    box-shadow: 0 0 8px #5bc286;
+}
+
+.booked {
+    background-color: #6c757d;
+    color: #fff;
+    cursor: not-allowed;
+    border-color: #5a6268;
+    box-shadow: 0 0 8px #6c757d;
+}
+
+.default {
+    background-color: #34495e;
+    color: #ecf0f1;
+}

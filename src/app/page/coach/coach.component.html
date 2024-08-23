@@ -1,0 +1,29 @@
+<div class="coach-page">
+  <div class="button-group">
+    <button
+      type="button"
+      class="btn btn-info text-white"
+      (click)="openSeatSelectionModal()"
+    >
+      Options
+    </button>
+    <button class="btn btn-primary" (click)="bookSeats()">Book</button>
+    <button type="button" class="btn btn-danger" (click)="resetSeats()">
+      Reset
+    </button>
+  </div>
+  <modal
+    (modeChange)="onModeChange($event)"
+    (seatNumberChange)="onSeatNumberChange($event)"
+  ></modal>
+  <div class="coach">
+    <div *ngFor="let slot of slots; let i = index">
+      <slot
+        [index]="i"
+        [selected]="slot.selected"
+        [booked]="slot.booked"
+        [onClick]="toggleSelection.bind(this)"
+      ></slot>
+    </div>
+  </div>
+</div>
